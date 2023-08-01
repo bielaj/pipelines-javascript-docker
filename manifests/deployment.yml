@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: bielajpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bielajpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: bielajpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: bielajpipelinesjavascriptdocker 
+          image: dhltestcontreg.azurecr.io/bielajpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
